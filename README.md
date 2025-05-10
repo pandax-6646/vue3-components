@@ -1,51 +1,38 @@
-<h1>vue-pure-admin精简版（非国际化版本）</h1>
-
-[![license](https://img.shields.io/github/license/pure-admin/vue-pure-admin.svg)](LICENSE)
-
-**中文** | [English](./README.en-US.md)
+# vue3-components
 
 ## 介绍
 
-精简版是基于 [vue-pure-admin](https://github.com/pure-admin/vue-pure-admin) 提炼出的架子，包含主体功能，更适合实际项目开发，打包后的大小在全局引入 [element-plus](https://element-plus.org) 的情况下仍然低于 `2.3MB`，并且会永久同步完整版的代码。开启 `brotli` 压缩和 `cdn` 替换本地库模式后，打包大小低于 `350kb`
+本项目基于 [vue-pure-thin](https://github.com/pure-admin/pure-admin-thin) 进行二次开发，主要是为了收集工作中和网上的实用的组件轮子。
+点击[查看](https://pure-admin.cn/)保姆级文档
 
-## 版本选择
+## 开发环境
 
-当前是非国际化版本，如果您需要国际化版本 [请点击](https://github.com/pure-admin/pure-admin-thin/tree/i18n)
+- pnpm 安装，***mac*** 用户需要在命令前加上 ***sudo***
 
-## `js` 版本
+```bash
+npm install -g pnpm
+```
 
-[点我查看 js 版本](https://pure-admin.cn/pages/js/)
+- 需要多个 ***node*** 环境，请自行安装 ***nvm***（window）或 ***n***（mac），[参考](https://www.yuque.com/pandax/front_end/zlm8wq#VQ0bK)
 
-## `max` 版本
+## 拉取项目
 
-[点我查看 max 版本](https://pure-admin.cn/pages/max/)
+```bash
+# 克隆项目
+git clone https://github.com/pandax-6646/vue3-components
 
-## 配套视频
+# 进入项目目录
+cd vue3-components
 
-[点我查看 UI 设计](https://www.bilibili.com/video/BV17g411T7rq)  
-[点我查看快速开发教程](https://www.bilibili.com/video/BV1kg411v7QT)
+# 安装依赖
+pnpm install
 
-## 配套保姆级文档
+# 启动服务
+pnpm dev
+```
 
-[点我查看 vue-pure-admin 文档](https://pure-admin.cn/)  
-[点我查看 @pureadmin/utils 文档](https://pure-admin-utils.netlify.app)
+## 构建命令
 
-## 优质服务、软件外包、赞助支持
-
-[点我查看详情](https://pure-admin.cn/pages/service/)
-
-## 预览
-
-[查看预览](https://pure-admin-thin.netlify.app/#/login)
-
-## 维护者
-
-[xiaoxian521](https://github.com/xiaoxian521)
-
-## ⚠️ 注意
-
-精简版不接受任何 `issues` 和 `pr`，如果有问题请到完整版 [issues](https://github.com/pure-admin/vue-pure-admin/issues/new/choose) 去提，谢谢！
-
-## 许可证
-
-[MIT © 2020-present, pure-admin](./LICENSE)
+```bash
+pnpm build
+```
