@@ -1,5 +1,36 @@
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(+2px, 0, 0);
+  }
+
+  30%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(+3px, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(-3px, 0, 0);
+  }
+}
+
 .el-form-item__label {
   font-weight: 700;
+}
+
+/* 表单校验失败的错误提示抖动效果 */
+.el-form-item.is-error .el-form-item__error {
+  animation: shake 600ms ease-in-out;
 }
 
 .el-breadcrumb__inner,
@@ -131,13 +162,13 @@
 
 /* 自定义菜单搜索样式 */
 .pure-search-dialog {
-  @media screen and (width > 760px) and (width <= 940px) {
+  @media screen and (width > 760px) and (width <=940px) {
     .el-input__inner {
       font-size: 12px;
     }
   }
 
-  @media screen and (width <= 470px) {
+  @media screen and (width <=470px) {
     .el-input__inner {
       font-size: 12px;
     }
@@ -163,17 +194,22 @@
 
 /* 仿 el-scrollbar 滚动条样式，支持大多数浏览器，如Chrome、Edge、Firefox、Safari等。整体暗色风格在 src/style/dark.scss 文件进行了适配 */
 .pure-scrollbar {
-  scrollbar-color: rgb(221 222 224) transparent; /* 滑块颜色、轨道颜色 */
+  scrollbar-color: rgb(221 222 224) transparent;
+  /* 滑块颜色、轨道颜色 */
 
   /* Firefox */
-  scrollbar-width: thin; /* 可选值为 'auto', 'thin', 'none' */
+  scrollbar-width: thin;
+
+  /* 可选值为 'auto', 'thin', 'none' */
   ::-webkit-scrollbar {
-    width: 6px; /* 滚动条宽度 */
+    width: 6px;
+    /* 滚动条宽度 */
   }
 
   /* 滚动条轨道 */
   ::-webkit-scrollbar-track {
-    background: transparent; /* 轨道颜色 */
+    background: transparent;
+    /* 轨道颜色 */
   }
 
   /* 滚动条滑块 */
@@ -184,6 +220,7 @@
 
   /* 滚动条滑块：hover状态 */
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(199 201 203); /* 滑块hover颜色 */
+    background: rgb(199 201 203);
+    /* 滑块hover颜色 */
   }
 }

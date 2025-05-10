@@ -5,8 +5,11 @@ export default defineFakeRoute([
   {
     url: "/login",
     method: "post",
+    timeout: 500,
     response: ({ body }) => {
-      if (body.username === "admin") {
+      const { username, password } = body;
+
+      if (username === "admin" && password === "admin888") {
         return {
           success: true,
           data: {
@@ -22,7 +25,9 @@ export default defineFakeRoute([
             expires: "2030/10/30 00:00:00"
           }
         };
-      } else {
+      }
+
+      if (username === "common" && password === "common888") {
         return {
           success: true,
           data: {
@@ -37,6 +42,12 @@ export default defineFakeRoute([
           }
         };
       }
+
+      return {
+        success: false,
+        data: null,
+        msg: "账号不存在或密码错误！"
+      };
     }
   }
 ]);
