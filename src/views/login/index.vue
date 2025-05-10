@@ -170,7 +170,7 @@ useEventListener(document, "keydown", ({ code }) => {
 </template>
 
 <style scoped>
-@import url("@/style/login.css");
+@import url("@/style/login.scss");
 </style>
 
 <style lang="scss" scoped>
