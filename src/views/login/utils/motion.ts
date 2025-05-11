@@ -1,6 +1,6 @@
 import { h, defineComponent, withDirectives, resolveDirective } from "vue";
 
-/** 封装@vueuse/motion动画库中的自定义指令v-motion */
+/** 将@vueuse/motion动画库中的 v-motion 自定义指令封装成组件 */
 export default defineComponent({
   name: "Motion",
   props: {
